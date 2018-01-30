@@ -121,7 +121,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As System.EventArgs) Handles Button6.Click
-        If ListBox2.Items.Count > 0 Then
+        If ListBox2.SelectedIndex >= 0 Then
             ListBox3.Items.Add(ListBox2.SelectedItem)
             ListBox2.Items.Remove(ListBox2.SelectedItem)
             If ListBox2.Items.Count > 0 Then
