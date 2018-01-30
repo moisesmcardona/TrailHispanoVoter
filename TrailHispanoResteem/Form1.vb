@@ -114,14 +114,19 @@ Public Class Form1
         If ListBox2.SelectedIndex >= 0 Then
             SetPostNotVoted(ListBox2.SelectedItem)
             ListBox2.Items.Remove(ListBox2.SelectedItem)
+            If ListBox2.Items.Count > 0 Then
+                ListBox2.SelectedIndex = 0
+            End If
         End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As System.EventArgs) Handles Button6.Click
-        ListBox3.Items.Add(ListBox2.SelectedItem)
-        ListBox2.Items.Remove(ListBox2.SelectedItem)
         If ListBox2.Items.Count > 0 Then
-            ListBox2.SelectedIndex = 0
+            ListBox3.Items.Add(ListBox2.SelectedItem)
+            ListBox2.Items.Remove(ListBox2.SelectedItem)
+            If ListBox2.Items.Count > 0 Then
+                ListBox2.SelectedIndex = 0
+            End If
         End If
     End Sub
 
